@@ -47,6 +47,12 @@
         <li><strong>Notes:</strong> <%= hairlog.notes %></li>
       <% } %>
     </ul>
+    <form
+      action="/users/<%= user._id %>/hairlogs/<%= hairlog._id %>?_method=DELETE"
+      method="POST"
+    >
+      <button type="submit">Delete this Log</button>
+    </form>
 
     <a href="/users/<%= user._id %>/hairlogs">Back to All Hair Logs</a>
   </body>
