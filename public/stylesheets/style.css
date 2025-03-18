@@ -1,0 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+@font-face {
+    font-family: 'HarlowDuo';
+    src: url('/fonts/HarlowDuoSerifPlain-Regular.ttf') format('truetype');
+}
+
+h1 {
+    font-family: 'HarlowDuo', serif;
+    font-size: 128px;
+    font-weight: normal;
+}
+
+p {
+    font-family: "Questrial", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;    
+}
