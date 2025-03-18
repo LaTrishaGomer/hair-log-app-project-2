@@ -9,5 +9,10 @@
     <%- include('../partials/_navbar.ejs') %> 
     <h1>My Hair Log</h1>
     <a href="/users/<%=user._id%>/hairlogs/new">Add a New Log</a>
+    <ul>
+        <% hairlogs.forEach((hairlog)=>{ %>
+        <li><%= hairlog.title %> - <%= hairlog.date.toLocaleDateString() %></li>
+        <% }) %>
+      </ul>
   </body>
 </html>

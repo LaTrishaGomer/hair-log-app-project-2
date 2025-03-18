@@ -6,6 +6,9 @@ const hairlogSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
+  title: {
+    type: [String],
+  },
   hairCondition: {
     type: String, 
     enum: [
@@ -22,15 +25,18 @@ const hairlogSchema = new mongoose.Schema({
       'oily', 
       'flaky'],
   },
-  washDay: {
-    type: Boolean, 
-    default: false,
-  },
   protectiveStyle: {
     type: [String],
   },
   productsUsed: {
     type: [String],
+  },
+  hydrationLevel: {
+    type: String,
+    enum: [
+      'low', 
+      'medium', 
+      'high'],
   },
   breakageOrShedding: {
     type: String, 

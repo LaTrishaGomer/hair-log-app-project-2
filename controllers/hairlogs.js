@@ -5,13 +5,16 @@ const User = require('../models/user.js');
 
 
 router.get('/', async (req, res) => {
-    try {
-      res.render('hairlogs/index.ejs');
-    } catch (error) {
-      console.log(error);
-      res.redirect('/');
-    }
-  });
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    res.render('hairlogs/index.ejs', {
+      hairlogs: currentUser.hairlogs,
+    });
+  } catch (error) {
+    console.log(error);
+    res.redirect('/');
+  }
+});
 
 router.get('/new', async (req, res) => {
     res.render('hairlogs/new.ejs');
