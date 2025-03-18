@@ -25,6 +25,12 @@ const hairlogSchema = new mongoose.Schema({
       'oily', 
       'flaky'],
   },
+  washDay: {
+    type: String, 
+    enum: [
+      'yes', 
+      'no'],
+  },
   protectiveStyle: {
     type: [String],
   },

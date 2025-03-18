@@ -27,6 +27,10 @@
         <li><strong>Products Used:</strong> <%= hairlog.productsUsed %></li>
       <% } %>
 
+      <% if (hairlog.washDay) { %>
+        <li><strong>Wash Day:</strong> <%= hairlog.washDay %></li>
+      <% } %>
+
       <% if (hairlog.breakageOrShedding) { %>
         <li><strong>Breakage or Shedding:</strong> <%= hairlog.breakageOrShedding %></li>
       <% } %>

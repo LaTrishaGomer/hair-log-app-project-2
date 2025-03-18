@@ -44,6 +44,14 @@
         <label for="productsUsed"></label>
         <textarea name="productsUsed" id="productsUsed" placeholder="ex: Tried Sally's Keratin treatment..."><%= hairlog.productsUsed %></textarea>
       
+        
+        <p>Did you wash your hair today?</p>
+        <label for="washDay">Wash Day:</label>
+        <select id="washDay" name="washDay">
+          <option value="yes"<%= hairlog.washDay === "yes" ? "selected" : "" %>>Yes</option>
+          <option value="no"<%= hairlog.washDay === "no" ? "selected" : "" %>>No</option>
+        </select>
+        
         <h2>Hair hydration</h2>
         <label for="hydrationLevel">Hydration Level:</label>
         <select id="hydrationLevel" name="hydrationLevel">
