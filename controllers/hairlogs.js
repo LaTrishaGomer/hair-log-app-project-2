@@ -34,6 +34,22 @@ router.post('/', async (req, res) => {
 });
 
 
+router.get('/:hairlogId', async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const hairlog = currentUser.hairlogs.id(req.params.hairlogId);
+    res.render('hairlogs/show.ejs', {
+      hairlog: hairlog,
+    });
+  } catch (error) {
+    console.log(error);
+    res.redirect('/');
+  }
+});
+
+
+
+
 
 
 module.exports = router;

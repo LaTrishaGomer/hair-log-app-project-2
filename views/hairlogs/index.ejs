@@ -11,7 +11,11 @@
     <a href="/users/<%=user._id%>/hairlogs/new">Add a New Log</a>
     <ul>
         <% hairlogs.forEach((hairlog)=>{ %>
-        <li><%= hairlog.title %> - <%= hairlog.date.toLocaleDateString() %></li>
+        <li>
+            <a href="/users/<%= user._id %>/hairlogs/<%= hairlog._id %>">
+            <%= hairlog.title %> - <%= hairlog.date.toLocaleDateString() %>
+            </a>
+        </li>
         <% }) %>
       </ul>
   </body>

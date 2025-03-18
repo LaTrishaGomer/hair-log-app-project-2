@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hair Log</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+
+    <h1><%= hairlog.title %> - <%= hairlog.date.toLocaleDateString() %></h1>
+
+    <ul>
+      <% if (hairlog.hairCondition) { %>
+        <li><strong>Hair Condition:</strong> <%= hairlog.hairCondition %></li>
+      <% } %>
+
+      <% if (hairlog.scalpCondition) { %>
+        <li><strong>Scalp Condition:</strong> <%= hairlog.scalpCondition %></li>
+      <% } %>
+
+      <% if (hairlog.protectiveStyle) { %>
+        <li><strong>Protective Style:</strong> <%= hairlog.protectiveStyle %></li>
+      <% } %>
+
+      <% if (hairlog.productsUsed) { %>
+        <li><strong>Products Used:</strong> <%= hairlog.productsUsed %></li>
+      <% } %>
+
+      <% if (hairlog.breakageOrShedding) { %>
+        <li><strong>Breakage or Shedding:</strong> <%= hairlog.breakageOrShedding %></li>
+      <% } %>
+
+      <% if (hairlog.proteinMoistureBalance) { %>
+        <li><strong>Protein/Moisture Balance:</strong> <%= hairlog.proteinMoistureBalance %></li>
+      <% } %>
+
+      <% if (hairlog.hydrationLevel) { %>
+        <li><strong>Hydration Level:</strong> <%= hairlog.hydrationLevel %></li>
+      <% } %>
+
+      <% if (hairlog.weather) { %>
+        <li><strong>Weather:</strong> <%= hairlog.weather %></li>
+      <% } %>
+
+      <% if (hairlog.notes) { %>
+        <li><strong>Notes:</strong> <%= hairlog.notes %></li>
+      <% } %>
+    </ul>
+
+    <a href="/users/<%= user._id %>/hairlogs">Back to All Hair Logs</a>
+  </body>
+</html>
