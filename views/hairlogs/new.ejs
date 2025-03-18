@@ -8,7 +8,7 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Hair Log</h1>
-    <form action="" method="">
+    <form action="/users/<%= user._id %>/hairlogs" method="POST">
         <label for="date">Date:</label>
         <input type="date" name="date" id="date" />
       
@@ -30,7 +30,7 @@
         </select>
 
         <h2>Hair care routine</h2>
-        <label for="washDay">Did you wash your hair today? Check here if yes, leave blank if no.</label>
+        <label for="washDay">Did you wash your hair today? <em>Check here if yes, leave blank if no.</em></label>
         <input type="checkbox" name="washDay" id="washDay">
 
 

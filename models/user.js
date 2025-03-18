@@ -27,7 +27,7 @@ const hairlogSchema = new mongoose.Schema({
     default: false,
   },
   protectiveStyle: {
-    type: String,
+    type: [String],
   },
   productsUsed: {
     type: [String],

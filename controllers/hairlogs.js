@@ -13,10 +13,23 @@ router.get('/', async (req, res) => {
     }
   });
 
-  router.get('/new', async (req, res) => {
+router.get('/new', async (req, res) => {
     res.render('hairlogs/new.ejs');
   });
   
+
+router.post('/', async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    currentUser.hairlogs.push(req.body);
+    await currentUser.save();
+    res.redirect(`/users/${currentUser._id}/hairlogs`);
+  } catch (error) {
+    console.log(error);
+    res.redirect('/');
+  }
+});
+
 
 
 
