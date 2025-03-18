@@ -47,6 +47,10 @@
         <li><strong>Notes:</strong> <%= hairlog.notes %></li>
       <% } %>
     </ul>
+    <a href="/users/<%= user._id %>/hairlogs/<%= hairlog._id %>/edit">
+        Edit this log
+      </a>
+
     <form
       action="/users/<%= user._id %>/hairlogs/<%= hairlog._id %>?_method=DELETE"
       method="POST"

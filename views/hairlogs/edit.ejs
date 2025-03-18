@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Hair Log</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Edit Hair Log</h1>
+    <form action="/users/<%= user._id %>/hairlogs/<%= hairlog._id %>?_method=PUT"
+        method="POST">
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date" value="<%= hairlog.date %>"/>
+
+        <h2>Today, my hair is feeling...</h2>
+        <label for="title"></label>
+        <textarea name="title" id="title" placeholder="Describe your hair today... "><%= hairlog.title %></textarea>
+      
+        <h2>Hair & scalp condition</h2>
+        <label for="hairCondition">Hair Condition:</label>
+        <select id="hairCondition" name="hairCondition">
+          <option value="dry"<%= hairlog.hairCondition === "dry" ? "selected" : "" %>>Dry</option>
+          <option value="moisturized"<%= hairlog.hairCondition === "moisturized" ? "selected" : "" %>>Moisturized</option>
+          <option value="oily"<%= hairlog.hairCondition === "oily" ? "selected" : "" %>>Oily</option>
+          <option value="balanced"<%= hairlog.hairCondition === "balanced" ? "selected" : "" %>>Balanced</option>
+        </select>
+      
+        <label for="scalpCondition">Scalp Condition:</label>
+        <select id="scalpCondition" name="scalpCondition">
+          <option value="dry"<%= hairlog.scalpCondition === "dry" ? "selected" : "" %>>Dry</option>
+          <option value="normal"<%= hairlog.scalpCondition === "normal" ? "selected" : "" %>>Normal</option>
+          <option value="oily"<%= hairlog.scalpCondition === "oily" ? "selected" : "" %>>Oily</option>
+          <option value="flaky"<%= hairlog.scalpCondition === "flaky" ? "selected" : "" %>>Flaky</option>
+        </select>
+
+        <h2>Hair care routine</h2>
+        <p>Did you wear a protective style? Add the style below:</p>
+        <label for="protectiveStyle"></label>
+        <textarea name="protectiveStyle" id="protectiveStyle" placeholder="ex: Braids, Twists, Bun..."><%= hairlog.protectiveStyle %></textarea>
+
+        <h2>Products used</h2>
+        <p>Which products did you use? How did it work on your hair?</p>
+        <label for="productsUsed"></label>
+        <textarea name="productsUsed" id="productsUsed" placeholder="ex: Tried Sally's Keratin treatment..."><%= hairlog.productsUsed %></textarea>
+      
+        <h2>Hair hydration</h2>
+        <label for="hydrationLevel">Hydration Level:</label>
+        <select id="hydrationLevel" name="hydrationLevel">
+          <option value="low"<%= hairlog.hydrationLevel === "low" ? "selected" : "" %>>Low</option>
+          <option value="medium"<%= hairlog.hydrationLevel === "medium" ? "selected" : "" %>>Medium</option>
+          <option value="high"<%= hairlog.hydrationLevel === "high" ? "selected" : "" %>>High</option>
+        </select>
+
+        <label for="proteinMoistureBalance">Protein Moisture Balance</label>
+        <select id="proteinMoistureBalance" name="proteinMoistureBalance">
+          <option value="protein overload"<%= hairlog.proteinMoistureBalance === "protein overload" ? "selected" : "" %>>Protein Overload</option>
+          <option value="moisture overload"<%= hairlog.proteinMoistureBalance === "moisture overload" ? "selected" : "" %>>Moisture Overload</option>
+          <option value="balanced"<%= hairlog.proteinMoistureBalance === "balanced" ? "selected" : "" %>>Balanced</option>
+        </select>
+
+        <h2>Hair damage or breakage</h2>
+        <label for="breakageOrShedding">Did you have any breakage or shedding:</label>
+        <select id="breakageOrShedding" name="breakageOrShedding">
+          <option value="none"<%= hairlog.breakageOrShedding === "none" ? "selected" : "" %>>None</option>
+          <option value="minimal"<%= hairlog.breakageOrShedding === "minimal" ? "selected" : "" %>>Minimal</option>
+          <option value="moderate"<%= hairlog.breakageOrShedding === "moderate" ? "selected" : "" %>>Moderate</option>
+          <option value="excessive"<%= hairlog.breakageOrShedding === "excessive" ? "selected" : "" %>>Excessive</option>
+        </select>
+
+        <h2>How is the weather?</h2>
+        <label for="weather">Weather:</label>
+        <select id="weather" name="weather">
+          <option value="humid"<%= hairlog.weather === "humid" ? "selected" : "" %>>Humid</option>
+          <option value="dry"<%= hairlog.weather === "dry" ? "selected" : "" %>>Dry</option>
+          <option value="cold"<%= hairlog.weather === "cold" ? "selected" : "" %>>Cold</option>
+          <option value="hot"<%= hairlog.weather === "hot" ? "selected" : "" %>>Hot</option>
+        </select>
+
+        <h2>Add your overall hair notes below:</h2>
+        <label for="notes"></label>
+        <textarea name="notes" id="notes" placeholder="ex: +1 inch of growth this month..."><%= hairlog.notes %></textarea>
+      
+        <button type="submit">Update Hair Log</button>
+      </form>
+  </body>
+</html>
