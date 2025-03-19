@@ -32,7 +32,7 @@ body {
     font-family: 'HarlowDuo', serif;
     font-weight: normal;
     font-size: 70px; 
-    margin-bottom: 6px; 
+    margin-bottom: 5px; 
   }
   
   .hero-content p {
@@ -42,8 +42,8 @@ body {
     font-style: normal;    
     font-size: 20px; 
     line-height: 30px;
-    margin-bottom: 27px; 
-    color: #525252;
+    margin-bottom: 30px; 
+    color: #3d3d3d;
   }
   
   .button-group {
