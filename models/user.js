@@ -52,6 +52,9 @@ const hairlogSchema = new mongoose.Schema({
       'moderate', 
       'excessive'],
   },
+  lengthCheck: {
+    type: [String],
+  },
   proteinMoistureBalance: {
     type: String, 
     enum: [

@@ -77,6 +77,11 @@
           <option value="excessive"<%= hairlog.breakageOrShedding === "excessive" ? "selected" : "" %>>Excessive</option>
         </select>
 
+        <h2>What's your current hair length?</h2>
+        <label for="lengthCheck"></label>
+        <textarea name="lengthCheck" id="lengthCheck" placeholder="current hair length..."><%= hairlog.lengthCheck %></textarea>
+      
+
         <h2>How is the weather?</h2>
         <label for="weather">Weather:</label>
         <select id="weather" name="weather">

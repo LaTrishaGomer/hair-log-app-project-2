@@ -36,6 +36,10 @@
         <li><strong>Breakage or Shedding:</strong> <%= hairlog.breakageOrShedding %></li>
       <% } %>
 
+      <% if (hairlog.lengthCheck) { %>
+        <li><strong>Length Check:</strong> <%= hairlog.lengthCheck %></li>
+      <% } %>
+
       <% if (hairlog.proteinMoistureBalance) { %>
         <li><strong>Protein/Moisture Balance:</strong> <%= hairlog.proteinMoistureBalance %></li>
       <% } %>
