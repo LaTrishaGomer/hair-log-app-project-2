@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face {
+    font-family: 'HarlowDuo';
+    src: url('/fonts/HarlowDuoSerifPlain-Regular.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    height: 100vh; 
+    align-items: center;
+    background: #CABAB7;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 52px;
+  }
+  
+  .hero-content h1 {
+    font-family: 'HarlowDuo', serif;
+    font-weight: normal;
+    font-size: 70px; 
+    margin-bottom: 6px; 
+  }
+  
+  .hero-content p {
+    font-family: "Questrial", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;    
+    font-size: 20px; 
+    margin-bottom: 27px; 
+    color: #525252;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 16px; 
+  }
+  
+  .button {
+    padding: 12px 32px; 
+    font-size: 16px; 
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: "Questrial", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+  }
+  
+  .button.primary {
+    background: #282828;
+    color: white;
+  }
+  
+  .button.secondary {
+    background: white;
+    color: #282828;
+    border: 1px solid #282828;
+  }
+  
+  .hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      grid-template-columns: 1fr; 
+      height: auto; 
+    }
+  
+    .hero-image {
+      height: 100vh; 
+    }
+  
+    .hero-content {
+      padding: 32px; 
+    }
+  
+    .button-group {
+      flex-direction: column; 
+      gap: 12px;
+    }
+  }
+  
