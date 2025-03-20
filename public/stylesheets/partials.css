@@ -28,7 +28,7 @@
   .nav-right h1 a {
     font-family: 'HarlowDuo', serif;
     font-weight: normal;
-    font-size: 35px;  
+    font-size: 30px;  
     text-decoration: none;
     color: #282828;
     display: flex;
@@ -37,7 +37,7 @@
   
   .button {
     padding: 10px 24px; 
-    font-size: 14px; 
+    font-size: 13px; 
     text-decoration: none;
     border-radius: 8px;
     font-family: "Questrial", sans-serif;

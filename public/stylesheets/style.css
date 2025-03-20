@@ -83,3 +83,88 @@ form button {
     color: white;
     margin-top: 10px;
 }
+
+
+/* ------   HAIRLOGS -------  */
+
+i {
+    font-size: 16px;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    line-height: 1; 
+    vertical-align: middle; 
+}
+
+.hairlog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    /* justify-content: center;
+    align-items: center;
+    width: 100%; */
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid #282828;
+}
+
+.card:hover {
+    transform: translateY(-3px); 
+}
+
+.card-content {
+    text-decoration: none;
+    /* color: inherit; */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hairlog-date {
+    font-size: 14px;
+    color: #3d3d3d;
+    font-family: "Questrial", sans-serif;
+}
+
+.hairlog-title {
+    font-size: 18px;
+    font-family: "Questrial", sans-serif;
+}
+
+.hairlog-notes {
+    font-size: 16px;
+    color: #3d3d3d;
+    font-family: "Questrial", sans-serif;
+}
+
+
+.hairlog-header {
+    padding: 16px; 
+    margin-bottom: 16px;
+    text-align: center; 
+}
+
+.hairlog-header h2 {
+    margin-bottom: 8px;
+    font-size: 48px;
+    font-family: 'HarlowDuo', serif;
+}
+
+.hairlog-header p.current-date {
+    font-size: 16px;
+    color:  #282828;
+    font-family: "Questrial", sans-serif;
+}
+
+.hairlog-header h3 {
+    font-size: 30px;
+    font-family: "Questrial", sans-serif;
+    font-weight: normal;
+}

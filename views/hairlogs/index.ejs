@@ -7,18 +7,26 @@
     <title>Hair Log</title>
   </head>
   <body>
-    <%- include('../partials/_navbar.ejs') %> 
-    <h2>Welcome, <%= user.username %></h2>
-    <h1>My Hair Log</h1>
-    <a href="/users/<%=user._id%>/hairlogs/new">Add a New Log</a>
-    <ul>
-        <% hairlogs.forEach((hairlog)=>{ %>
-        <li>
-            <a href="/users/<%= user._id %>/hairlogs/<%= hairlog._id %>">
-            <%= hairlog.title %> - <%= hairlog.date.toLocaleDateString() %>
+    <div class="hairlog-header">
+        <%- include('../partials/_navbar.ejs') %> 
+        <h2>Welcome back, <%= user.username %></h2>
+        <p><%= new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) %></p>
+        <h3>My Hair Logs</h3>
+        <a href="/users/<%=user._id%>/hairlogs/new" class="button primary"><i class="bx bx-plus"></i> Add a New Log</a>
+    </div>
+
+    <div class="hairlog-container">
+        <% hairlogs.forEach((hairlog) => { %>
+          <div class="card">
+            <a href="/users/<%= user._id %>/hairlogs/<%= hairlog._id %>" class="card-content">
+              <p class="hairlog-date"><%= hairlog.date.toLocaleDateString() %></p>
+              <h4 class="hairlog-title"><%= hairlog.title %></h4>
+              <% if (hairlog.notes) { %>
+                <p class="hairlog-notes"><%= hairlog.notes.length > 50 ? hairlog.notes.substring(0, 50) + '...' : hairlog.notes %></p>
+              <% } %>
             </a>
-        </li>
+          </div>
         <% }) %>
-      </ul>
+      </div>
   </body>
 </html>
