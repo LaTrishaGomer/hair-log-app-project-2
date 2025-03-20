@@ -45,39 +45,6 @@ const hairlogSchema = new mongoose.Schema({
   productsUsed: {
     type: [String],
   },
-  hydrationLevel: {
-    type: String,
-    enum: [
-      'low', 
-      'medium', 
-      'high'],
-  },
-  breakageOrShedding: {
-    type: String, 
-    enum: [
-      'none', 
-      'minimal', 
-      'moderate', 
-      'excessive'],
-  },
-  lengthCheck: {
-    type: [String],
-  },
-  proteinMoistureBalance: {
-    type: String, 
-    enum: [
-      'protein overload', 
-      'moisture overload', 
-      'balanced'],
-  },
-  weather: {
-    type: String,
-    enum: [
-      'humid', 
-      'dry',
-      'hot', 
-      'cold'], 
-  },
   notes: {
     type: String, 
   },
