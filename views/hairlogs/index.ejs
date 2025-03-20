@@ -13,6 +13,14 @@
         <p><%= new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) %></p>
         <h3>My Hair Logs</h3>
         <a href="/users/<%=user._id%>/hairlogs/new" class="button primary"><i class="bx bx-plus"></i> Add a New Log</a>
+
+        <a href="/users/<%= user._id %>/products/new" class="button primary">
+            <i class="bx bx-plus"></i> Add a New Product
+        </a>
+
+        <a href="/users/<%= user._id %>/recipes/new" class="button primary">
+            <i class="bx bx-plus"></i> Add a New DIY Recipe
+        </a>
     </div>
 
     <div class="hairlog-container">

@@ -76,35 +76,6 @@ const hairlogSchema = new mongoose.Schema({
 });
 
 
-// NEW USER MODLES -- CAN DELETE IF THIS MESSES UP THE CODE
-
-const recipeSchema = new mongoose.Schema({
-  name: { 
-    type: String, 
-  },
-    ingredients: { 
-    type: [String], 
-  },
-  instructions: { 
-    type: String, 
-  },
-});
-
-
-const productSchema = new mongoose.Schema({
-  name: { 
-    type: String, 
-  },
-  brand: { 
-    type: String 
-  },
-  review: { 
-    type: String 
-  },
-});
-
-
-
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -115,8 +86,6 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
   hairlogs: [hairlogSchema], 
-  recipes: [recipeSchema],
-  products: [productSchema],
 });
 
 const User = mongoose.model('User', userSchema);
