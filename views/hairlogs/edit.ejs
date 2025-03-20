@@ -62,43 +62,6 @@
           <option value="no"<%= hairlog.washDay === "no" ? "selected" : "" %>>No</option>
         </select>
         
-        <h2>Hair hydration</h2>
-        <label for="hydrationLevel">Hydration Level:</label>
-        <select id="hydrationLevel" name="hydrationLevel">
-          <option value="low"<%= hairlog.hydrationLevel === "low" ? "selected" : "" %>>Low</option>
-          <option value="medium"<%= hairlog.hydrationLevel === "medium" ? "selected" : "" %>>Medium</option>
-          <option value="high"<%= hairlog.hydrationLevel === "high" ? "selected" : "" %>>High</option>
-        </select>
-
-        <label for="proteinMoistureBalance">Protein Moisture Balance</label>
-        <select id="proteinMoistureBalance" name="proteinMoistureBalance">
-          <option value="protein overload"<%= hairlog.proteinMoistureBalance === "protein overload" ? "selected" : "" %>>Protein Overload</option>
-          <option value="moisture overload"<%= hairlog.proteinMoistureBalance === "moisture overload" ? "selected" : "" %>>Moisture Overload</option>
-          <option value="balanced"<%= hairlog.proteinMoistureBalance === "balanced" ? "selected" : "" %>>Balanced</option>
-        </select>
-
-        <h2>Hair damage or breakage</h2>
-        <label for="breakageOrShedding">Did you have any breakage or shedding:</label>
-        <select id="breakageOrShedding" name="breakageOrShedding">
-          <option value="none"<%= hairlog.breakageOrShedding === "none" ? "selected" : "" %>>None</option>
-          <option value="minimal"<%= hairlog.breakageOrShedding === "minimal" ? "selected" : "" %>>Minimal</option>
-          <option value="moderate"<%= hairlog.breakageOrShedding === "moderate" ? "selected" : "" %>>Moderate</option>
-          <option value="excessive"<%= hairlog.breakageOrShedding === "excessive" ? "selected" : "" %>>Excessive</option>
-        </select>
-
-        <h2>What's your current hair length?</h2>
-        <label for="lengthCheck"></label>
-        <textarea name="lengthCheck" id="lengthCheck" placeholder="current hair length..."><%= hairlog.lengthCheck %></textarea>
-      
-
-        <h2>How is the weather?</h2>
-        <label for="weather">Weather:</label>
-        <select id="weather" name="weather">
-          <option value="humid"<%= hairlog.weather === "humid" ? "selected" : "" %>>Humid</option>
-          <option value="dry"<%= hairlog.weather === "dry" ? "selected" : "" %>>Dry</option>
-          <option value="cold"<%= hairlog.weather === "cold" ? "selected" : "" %>>Cold</option>
-          <option value="hot"<%= hairlog.weather === "hot" ? "selected" : "" %>>Hot</option>
-        </select>
 
         <h2>Add your overall hair notes below:</h2>
         <label for="notes"></label>

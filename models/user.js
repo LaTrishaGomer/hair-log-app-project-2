@@ -48,7 +48,69 @@ const hairlogSchema = new mongoose.Schema({
   notes: {
     type: String, 
   },
+
+
+  productName:{
+    type: String,
+  }, 
+  category: {
+    type: String,
+    enum: [
+      'Shampoo', 
+      'Conditioner', 
+      'Treatment', 
+      'Oil', 
+      'Leave-in', 
+      'Styling Product'
+    ],
+  },
+  claims: {
+    type: String,
+  },
+  review: {
+    type: String,
+  },
+  rebuy: {
+    type: String,
+    enum: [
+      'yes', 
+      'no'
+    ],
+  },
+
+  recipeName: {
+    type: String,
+  },
+  ingredients: {
+    type: String,
+  },
+  instructions: {
+    type: String,
+  },
+  bestHairType: {
+    type: String,
+    enum: [
+      'dry', 
+      'oily', 
+      'normal', 
+      'all'
+    ],
+  },
+  usageFrequency: {
+    type: String,
+    enum: [
+      'weekly', 
+      'biweekly', 
+      'monthly'
+    ],
+  },
+  results: {
+    type: String,
+  },
 });
+
+
+
 
 
 const userSchema = new mongoose.Schema({
