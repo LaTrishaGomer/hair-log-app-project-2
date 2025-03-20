@@ -170,4 +170,33 @@ i {
 }
 
 
-/* HAIR LOG FORM */
+/* ENTRY TAG */
+
+.entry-tag {
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-family: "Questrial", sans-serif;
+    width: 100px;
+    text-align: center;
+}
+
+
+.entry-tag.log { 
+    background: #B1BDCC; 
+    color: #282828; 
+}  
+
+.entry-tag.recipe { 
+    background: #CABAB7; 
+    color: #282828; 
+}   
+
+.entry-tag.product { 
+    background: #BA8569; 
+    color: #282828; 
+}  

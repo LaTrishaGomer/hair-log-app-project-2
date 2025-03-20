@@ -12,6 +12,11 @@
     <h1><%= hairlog.title %> - <%= hairlog.date.toLocaleDateString() %></h1>
 
     <ul>
+      <% if (hairlog.entryType) { %>
+        <li><strong>Entry Type:</strong> <%= hairlog.entryType %></li>
+      <% } %>
+
+
       <% if (hairlog.hairCondition) { %>
         <li><strong>Hair Condition:</strong> <%= hairlog.hairCondition %></li>
       <% } %>

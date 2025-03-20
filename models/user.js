@@ -6,6 +6,14 @@ const hairlogSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
+  entryType: { 
+    type: String, 
+    enum: [
+      'log', 
+      'recipe', 
+      'product'
+    ], 
+   },
   title: {
     type: [String],
   },

@@ -1,100 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Add a New Hair Log</title>
-  </head>
-  <body>
-    <%- include('../partials/_navbar.ejs') %>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Add a New Hair Log</title>
+</head>
+
+<body>
+  <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Hair Log</h1>
+
+
     <form action="/users/<%= user._id %>/hairlogs" method="POST">
-        <label for="date">Date:</label>
-        <input type="date" name="date" id="date" />
+      <label for="date">Date:</label>
+      <input type="date" name="date" id="date" />
 
-        <h2>Today, my hair is feeling...</h2>
-        <label for="title"></label>
-        <textarea name="title" id="title" placeholder="Describe your hair today..."></textarea>
-      
-        <h2>Hair & scalp condition</h2>
-        <label for="hairCondition">Hair Condition:</label>
-        <select id="hairCondition" name="hairCondition">
-          <option value="dry">Dry</option>
-          <option value="moisturized">Moisturized</option>
-          <option value="oily">Oily</option>
-          <option value="balanced">Balanced</option>
-        </select>
-      
-        <label for="scalpCondition">Scalp Condition:</label>
-        <select id="scalpCondition" name="scalpCondition">
-          <option value="dry">Dry</option>
-          <option value="normal">Normal</option>
-          <option value="oily">Oily</option>
-          <option value="flaky">Flaky</option>
-        </select>
 
-        <h2>Hair care routine</h2>
-        <p>Did you wear a protective style? Add the style below:</p>
-        <label for="protectiveStyle"></label>
-        <textarea name="protectiveStyle" id="protectiveStyle" placeholder="ex: Braids, Twists, Bun..."></textarea>
+      <h2>What type of entry is this?</h2>
+      <label for="entryType">Entry Type:</label>
+      <select id="entryType" name="entryType">
+        <option value="log">Hair Log</option>
+        <option value="recipe">DIY Hair Recipe</option>
+        <option value="product">Favorite Product</option>
+      </select>
 
-        <h2>Products used</h2>
-        <p>Which products did you use? How did it work on your hair?</p>
-        <label for="productsUsed"></label>
-        <textarea name="productsUsed" id="productsUsed" placeholder="ex: Tried Sally's Keratin treatment..."></textarea>
 
-        <p>Did you wash your hair today?</p>
-        <label for="washDay">Wash Day:</label>
-        <select id="washDay" name="washDay">
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-      
-        <h2>Hair hydration</h2>
-        <label for="hydrationLevel">Hydration Level:</label>
-        <select id="hydrationLevel" name="hydrationLevel">
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
+      <h2>Today, my hair is feeling...</h2>
+      <label for="title"></label>
+      <textarea name="title" id="title" placeholder="Describe your hair today..."></textarea>
 
-        <label for="proteinMoistureBalance">Protein Moisture Balance</label>
-        <select id="proteinMoistureBalance" name="proteinMoistureBalance">
-          <option value="protein overload">Protein Overload</option>
-          <option value="moisture overload">Moisture Overload</option>
-          <option value="balanced">Balanced</option>
-        </select>
+      <h2>Hair & scalp condition</h2>
+      <label for="hairCondition">Hair Condition:</label>
+      <select id="hairCondition" name="hairCondition">
+        <option value="dry">Dry</option>
+        <option value="moisturized">Moisturized</option>
+        <option value="oily">Oily</option>
+        <option value="balanced">Balanced</option>
+      </select>
 
-        <h2>Hair damage or breakage</h2>
-        <label for="breakageOrShedding">Did you have any breakage or shedding:</label>
-        <select id="breakageOrShedding" name="breakageOrShedding">
-          <option value="none">None</option>
-          <option value="minimal">Minimal</option>
-          <option value="moderate">Moderate</option>
-          <option value="excessive">Excessive</option>
-        </select>
+      <label for="scalpCondition">Scalp Condition:</label>
+      <select id="scalpCondition" name="scalpCondition">
+        <option value="dry">Dry</option>
+        <option value="normal">Normal</option>
+        <option value="oily">Oily</option>
+        <option value="flaky">Flaky</option>
+      </select>
 
-        <h2>What's your current hair length?</h2>
-        <label for="lengthCheck"></label>
-        <textarea name="lengthCheck" id="lengthCheck" placeholder="current hair length..."></textarea>
-      
+      <h2>Hair care routine</h2>
+      <p>Did you wear a protective style? Add the style below:</p>
+      <label for="protectiveStyle"></label>
+      <textarea name="protectiveStyle" id="protectiveStyle" placeholder="ex: Braids, Twists, Bun..."></textarea>
 
-        <h2>How is the weather?</h2>
-        <label for="weather">Weather:</label>
-        <select id="weather" name="weather">
-          <option value="humid">Humid</option>
-          <option value="dry">Dry</option>
-          <option value="cold">Cold</option>
-          <option value="hot">Hot</option>
-        </select>
+      <h2>Products used</h2>
+      <p>Which products did you use? How did it work on your hair?</p>
+      <label for="productsUsed"></label>
+      <textarea name="productsUsed" id="productsUsed" placeholder="ex: Tried Sally's Keratin treatment..."></textarea>
 
-        <h2>Add your overall hair notes below:</h2>
-        <label for="notes"></label>
-        <textarea name="notes" id="notes" placeholder="ex: +1 inch of growth this month..."></textarea>
+      <p>Did you wash your hair today?</p>
+      <label for="washDay">Wash Day:</label>
+      <select id="washDay" name="washDay">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
 
-        <button type="submit">Add Hair Log</button>
-      </form>
-  </body>
+      <h2>Hair hydration</h2>
+      <label for="hydrationLevel">Hydration Level:</label>
+      <select id="hydrationLevel" name="hydrationLevel">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <label for="proteinMoistureBalance">Protein Moisture Balance</label>
+      <select id="proteinMoistureBalance" name="proteinMoistureBalance">
+        <option value="protein overload">Protein Overload</option>
+        <option value="moisture overload">Moisture Overload</option>
+        <option value="balanced">Balanced</option>
+      </select>
+
+      <h2>Hair damage or breakage</h2>
+      <label for="breakageOrShedding">Did you have any breakage or shedding:</label>
+      <select id="breakageOrShedding" name="breakageOrShedding">
+        <option value="none">None</option>
+        <option value="minimal">Minimal</option>
+        <option value="moderate">Moderate</option>
+        <option value="excessive">Excessive</option>
+      </select>
+
+      <h2>What's your current hair length?</h2>
+      <label for="lengthCheck"></label>
+      <textarea name="lengthCheck" id="lengthCheck" placeholder="current hair length..."></textarea>
+
+
+      <h2>How is the weather?</h2>
+      <label for="weather">Weather:</label>
+      <select id="weather" name="weather">
+        <option value="humid">Humid</option>
+        <option value="dry">Dry</option>
+        <option value="cold">Cold</option>
+        <option value="hot">Hot</option>
+      </select>
+
+      <h2>Add your overall hair notes below:</h2>
+      <label for="notes"></label>
+      <textarea name="notes" id="notes" placeholder="ex: +1 inch of growth this month..."></textarea>
+
+      <button type="submit">Add Hair Log</button>
+    </form>
+</body>
+
 </html>
 

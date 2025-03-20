@@ -14,6 +14,15 @@
         <label for="date">Date:</label>
         <input type="date" name="date" id="date" value="<%= hairlog.date %>"/>
 
+        <h2>What type of entry is this?</h2>
+        <label for="entryType">Entry Type:</label>
+        <select id="entryType" name="entryType">
+            <option value="log"<%= hairlog.hairCondition === "log" ? "selected" : "" %>>Hair Log</option>
+            <option value="recipe"<%= hairlog.hairCondition === "recipe" ? "selected" : "" %>>DIY Hair Recipe</option>
+            <option value="product"<%= hairlog.hairCondition === "product" ? "selected" : "" %>>Favorite Product</option>
+        </select>
+        
+
         <h2>Today, my hair is feeling...</h2>
         <label for="title"></label>
         <textarea name="title" id="title" placeholder="Describe your hair today... "><%= hairlog.title %></textarea>
