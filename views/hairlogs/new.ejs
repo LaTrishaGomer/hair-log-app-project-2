@@ -27,47 +27,130 @@
       </select>
 
 
-      <h2>Today, my hair is feeling...</h2>
-      <label for="title"></label>
-      <textarea name="title" id="title" placeholder="Describe your hair today..."></textarea>
+      <hr>
+      <div id="hairlog">
+        <h1>Hair Log</h1>
+        <hr>
 
-      <h2>Hair & scalp condition</h2>
-      <label for="hairCondition">Hair Condition:</label>
-      <select id="hairCondition" name="hairCondition">
-        <option value="dry">Dry</option>
-        <option value="moisturized">Moisturized</option>
-        <option value="oily">Oily</option>
-        <option value="balanced">Balanced</option>
-      </select>
+        <h2>Today, my hair is feeling...</h2>
+        <label for="title"></label>
+        <textarea name="title" id="title" placeholder="Describe your hair today..."></textarea>
 
-      <label for="scalpCondition">Scalp Condition:</label>
-      <select id="scalpCondition" name="scalpCondition">
-        <option value="dry">Dry</option>
-        <option value="normal">Normal</option>
-        <option value="oily">Oily</option>
-        <option value="flaky">Flaky</option>
-      </select>
+        <h2>Hair & scalp condition</h2>
+        <label for="hairCondition">Hair Condition:</label>
+        <select id="hairCondition" name="hairCondition">
+          <option value="dry">Dry</option>
+          <option value="moisturized">Moisturized</option>
+          <option value="oily">Oily</option>
+          <option value="balanced">Balanced</option>
+        </select>
 
-      <h2>Hair care routine</h2>
-      <p>Did you wear a protective style? Add the style below:</p>
-      <label for="protectiveStyle"></label>
-      <textarea name="protectiveStyle" id="protectiveStyle" placeholder="ex: Braids, Twists, Bun..."></textarea>
+        <label for="scalpCondition">Scalp Condition:</label>
+        <select id="scalpCondition" name="scalpCondition">
+          <option value="dry">Dry</option>
+          <option value="normal">Normal</option>
+          <option value="oily">Oily</option>
+          <option value="flaky">Flaky</option>
+        </select>
 
-      <h2>Products used</h2>
-      <p>Which products did you use? How did it work on your hair?</p>
-      <label for="productsUsed"></label>
-      <textarea name="productsUsed" id="productsUsed" placeholder="ex: Tried Sally's Keratin treatment..."></textarea>
+        <h2>Hairstyle</h2>
+        <p>Did you wear a protective style? Add the style below:</p>
+        <label for="protectiveStyle"></label>
+        <textarea name="protectiveStyle" id="protectiveStyle" placeholder="ex: Braids, Twists, Bun..."></textarea>
 
-      <p>Did you wash your hair today?</p>
-      <label for="washDay">Wash Day:</label>
-      <select id="washDay" name="washDay">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-      </select>
+        <h2>Products used</h2>
+        <p>Which products did you use? How did it work on your hair?</p>
+        <label for="productsUsed"></label>
+        <textarea name="productsUsed" id="productsUsed" placeholder="ex: Tried Sally's Keratin treatment..."></textarea>
 
-      <h2>Add your overall hair notes below:</h2>
-      <label for="notes"></label>
-      <textarea name="notes" id="notes" placeholder="ex: +1 inch of growth this month..."></textarea>
+        <h2>Wash day</h2>
+        <label for="washDay">Wash Day?</label>
+        <select id="washDay" name="washDay">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <h2>Additional Notes</h2>
+        <label for="notes"></label>
+        <textarea name="notes" id="notes" placeholder="ex: +1 inch of growth this month..."></textarea>
+      </div>
+
+      <hr>
+      <div id="products">
+        <h1>Favorite Hair Products</h1>
+        <hr>
+
+        <h2>Product Name</h2>
+        <label for="productName">Product Name:</label>
+        <input type="text" name="productName" id="productName" />
+
+        <h2>Category</h2>
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+          <option value="Shampoo">Shampoo</option>
+          <option value="Conditioner">Conditioner</option>
+          <option value="Treatment">Treatment</option>
+          <option value="Oil">Oil</option>
+          <option value="Leave-in">Leave-in</option>
+          <option value="Styling Product">Styling Product</option>
+        </select>
+
+        <h2>Product Claims</h2>
+        <label for="claims">What does it claim to do?</label>
+        <textarea name="claims" id="claims"></textarea>
+
+        <h2>Personal Review</h2>
+        <label for="review">Personal Review:</label>
+        <textarea name="review" id="review"></textarea>
+
+        <h2>Would I Buy It Again</h2>
+        <label for="rebuy">Would I buy it again?</label>
+        <select id="rebuy" name="rebuy">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+
+      <hr>
+      <div id="recipes">
+        <h1>DIY Hair Recipes</h1>
+        <hr>
+
+        <h2>Would I Buy It Again</h2>
+        <label for="recipeName">Recipe Name:</label>
+        <input type="text" name="recipeName" id="recipeName" required />
+
+        <h2>Would I Buy It Again</h2>
+        <label for="ingredients">Ingredients List:</label>
+        <textarea name="ingredients" id="ingredients" placeholder="ex: 2 tbsp coconut oil, 1 egg..."></textarea>
+
+        <h2>Would I Buy It Again</h2>
+        <label for="instructions">How to Use?</label>
+        <textarea name="instructions" id="instructions" placeholder="ex: Mix ingredients, apply to scalp..."></textarea>
+
+        <h2>Would I Buy It Again</h2>
+        <label for="bestHairType">Best Hair Type for this Recipe:</label>
+        <select id="bestHairType" name="bestHairType">
+          <option value="dry">Dry</option>
+          <option value="oily">Oily</option>
+          <option value="normal">Normal</option>
+          <option value="all">All Hair Types</option>
+        </select>
+
+        <h2>Would I Buy It Again</h2>
+        <label for="usageFrequency">How Often to Use?</label>
+        <select id="usageFrequency" name="usageFrequency">
+          <option value="weekly">Once a week</option>
+          <option value="biweekly">Every two weeks</option>
+          <option value="monthly">Once a month</option>
+        </select>
+
+        <h2>Would I Buy It Again</h2>
+        <label for="results">Results & Notes:</label>
+        <textarea name="results" id="results" placeholder="ex: Hair felt softer, would use again!"></textarea>
+      </div>
+
 
       <button type="submit">Add Hair Log</button>
     </form>
