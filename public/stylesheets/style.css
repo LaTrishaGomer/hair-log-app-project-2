@@ -33,7 +33,7 @@ body {
     max-width: 450px;
     height: 587px;
     border-radius: 5px;
-    background: #fff;
+    background: white;
     box-shadow: 1px 1px 1px 1px;
 }
 
@@ -96,15 +96,6 @@ i {
     vertical-align: middle; 
 }
 
-.hairlog-container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 16px;
-    /* justify-content: center;
-    align-items: center;
-    width: 100%; */
-}
 
 .card {
     background: white;
@@ -121,29 +112,39 @@ i {
 
 .card-content {
     text-decoration: none;
-    /* color: inherit; */
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+    padding: 20px;
+}
+
+.hairlog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 48px;
 }
 
 .hairlog-date {
-    font-size: 14px;
+    font-size: 16px;
     color: #3d3d3d;
     font-family: "Questrial", sans-serif;
 }
 
 .hairlog-title {
-    font-size: 18px;
+    font-size: 24px;
     font-family: "Questrial", sans-serif;
+    text-decoration: none;
+    color:  #282828;
+    margin: 0;
 }
 
 .hairlog-notes {
     font-size: 16px;
     color: #3d3d3d;
     font-family: "Questrial", sans-serif;
+    line-height: 23px;
 }
-
 
 .hairlog-header {
     padding: 16px; 
@@ -157,11 +158,6 @@ i {
     font-family: 'HarlowDuo', serif;
 }
 
-.hairlog-header p.current-date {
-    font-size: 16px;
-    color:  #282828;
-    font-family: "Questrial", sans-serif;
-}
 
 .hairlog-header h3 {
     font-size: 30px;
@@ -169,8 +165,6 @@ i {
     font-weight: normal;
 }
 
-
-/* ENTRY TAG */
 
 .entry-tag {
     display: inline-block;
@@ -184,7 +178,6 @@ i {
     width: 100px;
     text-align: center;
 }
-
 
 .entry-tag.log { 
     background: #B1BDCC; 
@@ -200,3 +193,16 @@ i {
     background: #BA8569; 
     color: #282828; 
 }  
+
+
+@media (max-width: 1024px) {
+    .hairlog-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hairlog-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

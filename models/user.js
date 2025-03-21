@@ -23,7 +23,8 @@ const hairlogSchema = new mongoose.Schema({
       'dry', 
       'moisturized', 
       'oily', 
-      'balanced'],
+      'balanced'
+    ],
   },
   scalpCondition: {
     type: String, 
@@ -37,7 +38,8 @@ const hairlogSchema = new mongoose.Schema({
     type: String, 
     enum: [
       'yes', 
-      'no'],
+      'no'
+    ],
   },
   protectiveStyle: {
     type: [String],
@@ -45,72 +47,43 @@ const hairlogSchema = new mongoose.Schema({
   productsUsed: {
     type: [String],
   },
+  hydrationLevel: {
+    type: String,
+    enum: [
+      'low', 
+      'medium', 
+      'high'],
+  },
+  breakageOrShedding: {
+    type: String, 
+    enum: [
+      'none', 
+      'minimal', 
+      'moderate', 
+      'excessive'],
+  },
+  lengthCheck: {
+    type: [String],
+  },
+  proteinMoistureBalance: {
+    type: String, 
+    enum: [
+      'protein overload', 
+      'moisture overload', 
+      'balanced'],
+  },
+  weather: {
+    type: String,
+    enum: [
+      'humid', 
+      'dry',
+      'hot', 
+      'cold'], 
+  },
   notes: {
     type: String, 
   },
-
-
-  productName:{
-    type: String,
-  }, 
-  category: {
-    type: String,
-    enum: [
-      'Shampoo', 
-      'Conditioner', 
-      'Treatment', 
-      'Oil', 
-      'Leave-in', 
-      'Styling Product'
-    ],
-  },
-  claims: {
-    type: String,
-  },
-  review: {
-    type: String,
-  },
-  rebuy: {
-    type: String,
-    enum: [
-      'yes', 
-      'no'
-    ],
-  },
-
-  recipeName: {
-    type: String,
-  },
-  ingredients: {
-    type: String,
-  },
-  instructions: {
-    type: String,
-  },
-  bestHairType: {
-    type: String,
-    enum: [
-      'dry', 
-      'oily', 
-      'normal', 
-      'all'
-    ],
-  },
-  usageFrequency: {
-    type: String,
-    enum: [
-      'weekly', 
-      'biweekly', 
-      'monthly'
-    ],
-  },
-  results: {
-    type: String,
-  },
 });
-
-
-
 
 
 const userSchema = new mongoose.Schema({
