@@ -9,7 +9,7 @@ The inspiration behind this project comes from my own personal experience. After
 I often found myself saving Word docs full of routines, tips, and advice from natural haircare forums. I wanted to create a digital version of that experience.
 
 ## 📸 Screenshot
-![Mane Memo Screenshot](images/mane-memo-cover.png)  
+![Mane Memo Screenshot](/public/images/mane-memo-cover.png)  
 
 ## 🚀 Live Demo
 [📝 Try Mane Memo Here](https://mane-memo-1765dbcbd8f1.herokuapp.com)
