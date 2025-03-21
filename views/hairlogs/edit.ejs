@@ -8,6 +8,7 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+    <div class="newlog-card">
     <h1>Edit Hair Log</h1>
     <form action="/users/<%= user._id %>/hairlogs/<%= hairlog._id %>?_method=PUT"
         method="POST">
@@ -17,11 +18,13 @@
         <h2>What type of entry is this?</h2>
         <label for="entryType">Entry Type:</label>
         <select id="entryType" name="entryType">
-            <option value="log"<%= hairlog.hairCondition === "log" ? "selected" : "" %>>Hair Log</option>
-            <option value="recipe"<%= hairlog.hairCondition === "recipe" ? "selected" : "" %>>DIY Hair Recipe</option>
-            <option value="product"<%= hairlog.hairCondition === "product" ? "selected" : "" %>>Favorite Product</option>
+            <option value="washday"<%= hairlog.hairCondition === "washday" ? "selected" : "" %>>Wash Day</option>
+            <option value="growth"<%= hairlog.hairCondition === "growth" ? "selected" : "" %>>Length Check</option>
+            <option value="product"<%= hairlog.hairCondition === "product" ? "selected" : "" %>>New Product</option>
+            <option value="trim"<%= hairlog.hairCondition === "trim" ? "selected" : "" %>>Trimmed Ends</option>
+            <option value="recipe"<%= hairlog.hairCondition === "recipe" ? "selected" : "" %>>DIY Recipe</option>
+            <option value="challenge"<%= hairlog.hairCondition === "challenge" ? "selected" : "" %>>Hair Challenge</option>
         </select>
-        
 
         <h2>Today, my hair is feeling...</h2>
         <label for="title"></label>
@@ -69,5 +72,6 @@
       
         <button type="submit">Update Hair Log</button>
       </form>
+    </div>
   </body>
 </html>

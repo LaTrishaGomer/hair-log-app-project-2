@@ -179,12 +179,12 @@ i {
     text-align: center;
 }
 
-.entry-tag.log { 
+.entry-tag.washday { 
     background: #B1BDCC; 
     color: #282828; 
 }  
 
-.entry-tag.recipe { 
+.entry-tag.growth { 
     background: #CABAB7; 
     color: #282828; 
 }   
@@ -193,6 +193,97 @@ i {
     background: #BA8569; 
     color: #282828; 
 }  
+
+.entry-tag.trim { 
+    background: #BCB9C1; 
+    color: #282828; 
+}  
+
+.entry-tag.recipe { 
+    background: #D1B09D; 
+    color: #282828; 
+}   
+
+.entry-tag.challenge { 
+    background: #282828; 
+    color: white; 
+} 
+
+
+.newlog-card {
+    margin: 40px auto;
+    padding: 40px 50px;
+    max-width: 700px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #282828;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  }
+
+.newlog-card input,
+.newlog-card select,
+.newlog-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0 20px;
+  padding: 14px 12px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 1px solid #c0c0c0;
+  font-family: "Questrial", sans-serif;
+  letter-spacing: 1px;
+  background: white;
+  color: #282828;
+  line-height: 23px;
+}
+
+.newlog-card textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.newlog-card h1,
+.newlog-card h2 {
+  font-family: 'HarlowDuo', serif;
+  font-weight: normal;
+  color: #282828;
+  margin-bottom: 10px;
+}
+
+.newlog-card h1 {
+  font-size: 35px;
+  text-align: center;
+}
+
+.newlog-card h2 {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.newlog-card label {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #282828;
+}
+
+.show-page {
+    font-size: 18px;
+    color: #3d3d3d;
+    font-family: "Poppins", sans-serif;
+    line-height: 42px;
+    gap: 10px;
+
+}
+
+.show-form {
+    padding-bottom: 20px;
+
+}
+
+.show-form .button.secondary {
+    margin-top: 30px;
+}
 
 
 @media (max-width: 1024px) {

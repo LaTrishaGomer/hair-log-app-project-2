@@ -61,6 +61,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     display: inline-block;
+    cursor: pointer;
   }
   
   .button.primary {

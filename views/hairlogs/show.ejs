@@ -9,9 +9,10 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
 
+    <div class="newlog-card">
     <h1><%= hairlog.title %> - <%= hairlog.date.toLocaleDateString() %></h1>
 
-    <ul>
+    <ul class="show-page">
       <% if (hairlog.entryType) { %>
         <li><strong>Entry Type:</strong> <%= hairlog.entryType %></li>
       <% } %>
@@ -41,17 +42,21 @@
         <li><strong>Notes:</strong> <%= hairlog.notes %></li>
       <% } %>
     </ul>
-    <a href="/users/<%= user._id %>/hairlogs/<%= hairlog._id %>/edit">
-        Edit this log
-      </a>
 
-    <form
+    <form class="show-form"
       action="/users/<%= user._id %>/hairlogs/<%= hairlog._id %>?_method=DELETE"
-      method="POST"
-    >
+      method="POST">
       <button type="submit">Delete this Log</button>
+
+
+    <a href="/users/<%= user._id %>/hairlogs/<%= hairlog._id %>/edit" class="button secondary">
+      Edit this log
+    </a>
+
+    <a href="/users/<%= user._id %>/hairlogs" class="button secondary">
+      Back to All Hair Logs</a>
     </form>
 
-    <a href="/users/<%= user._id %>/hairlogs">Back to All Hair Logs</a>
+  </div>
   </body>
 </html>

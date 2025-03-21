@@ -9,9 +9,12 @@ const hairlogSchema = new mongoose.Schema({
   entryType: { 
     type: String, 
     enum: [
-      'log', 
-      'recipe', 
-      'product'
+      'washday',
+      'growth',
+      'product',
+      'trim',
+      'recipe',
+      'challenge'
     ], 
    },
   title: {
