@@ -34,6 +34,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use((req, res, next) => {
+  if (req.headers['x-forwarded-proto'] !== 'https') {
+    return res.redirect('https://' + req.headers.host + req.url);
+  }
+  next();
+});
+
+
+app.use((req, res, next) => {
   const host = req.headers.host;
   if (host === 'https://mane-memo-1765dbcbd8f1.herokuapp.com/') {
     return res.redirect(301, 'http://www.mane-memo.com/' + req.url);
