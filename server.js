@@ -33,6 +33,15 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+app.use((req, res, next) => {
+  const host = req.headers.host;
+  if (host === 'https://mane-memo-1765dbcbd8f1.herokuapp.com/') {
+    return res.redirect(301, 'http://www.mane-memo.com/' + req.url);
+  }
+  next();
+});
+
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
