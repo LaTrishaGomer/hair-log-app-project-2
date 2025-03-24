@@ -18,6 +18,14 @@ const port = process.env.PORT ? process.env.PORT : '3000';
 
 const path = require('path');
 
+app.use((req, res, next) => {
+  const host = req.headers.host;
+  if (host && host.includes('herokuapp.com')) {
+    return res.redirect(301, 'https://www.mane-memo.com' + req.url);
+  }
+  next();
+});
+
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -31,15 +39,6 @@ app.use(morgan('dev'));
 
 
 app.use(express.static(path.join(__dirname, 'public')));
-
-
-app.use((req, res, next) => {
-  const host = req.headers.host;
-  if (host === 'https://mane-memo-1765dbcbd8f1.herokuapp.com/') {
-    return res.redirect(301, 'https://www.mane-memo.com/' + req.url);
-  }
-  next();
-});
 
 
 app.use(
